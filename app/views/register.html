@@ -1,0 +1,60 @@
+{{<layout}}
+
+{{$pageTitle}}
+  GOV.UK register finder demo
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main" class="register-finder">
+  {{>includes/phase}}
+
+  <header>
+    <div class="title-and-metadata">
+
+      <div class="govuk-title length-average">
+        <h1>{{ title }}</h1>
+      </div>
+
+      <div class="metadata">
+        <div class="govuk-metadata">
+          <dl>
+            <dt>From:</dt>
+            <dd><a href="https://www.gov.uk/government/organisations/{{ organisation }}">{{ from }}</a></dd>
+          </dl>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <div id="filter" class="grid-row">
+    <div id="filter-form" class="column-one-third">
+      <p>Filter</p>
+      <!-- form goes here .. -->
+    </div>
+
+    <div id="results" class="column-two-thirds">
+      <p>Results</p>
+      <div class="feed">
+        <span>Get updates to this list</span>
+        <a href="">feed</a>
+      </div>
+
+      <ul>
+      {{#list}}
+        <li class="record register-{{ register }}">
+        <h3><a href="">{{ register }}</a></h3>
+        <p>Maintained by: {{ registry }}</p>
+        <p>{{ text }}</p>
+      </li>
+      {{/list}}
+    </ul>
+  </div>
+
+</main>
+
+{{/content}}
+
+{{/layout}}
