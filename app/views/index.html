@@ -15,7 +15,11 @@
 
       <h1 class="heading-xlarge">Prototype GOV.UK register finders</h1>
 
-      <a href="/register/register">register</a>
+      <ul>
+      {{#finders}}
+        <li><a href="/register/{{register}}">{{register}}</a>
+      {{/finders}}
+      </ul>
 
     </div>
   </div>
