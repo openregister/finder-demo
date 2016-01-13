@@ -1,0 +1,13 @@
+    <ul>
+      {{#list}}
+        <li class="document record">
+          <h3><a href="{{ href }}">{{ name }}</a></h3>
+          <p>{{{ text }}}</p>
+          <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value"><a href="https://www.gov.uk/government/organisations/{{ organisation }}">{{ from }}</a></dd>
+          </dl>
+        </li>
+      {{/list}}
+    </ul>
+

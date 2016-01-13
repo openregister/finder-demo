@@ -1,0 +1,29 @@
+<div id="finder-frontend">
+  {{>includes/phase}}
+
+  <header>
+    <div class="title-and-metadata">
+      <div class="govuk-title length-average">
+        <h1 class="heading-xlarge">{{ finder.title }}</h1>
+      </div>
+      <div class="metadata">
+        {{>finder/metadata}}
+      </div>
+    </div>
+  </header>
+
+  <div class="filtering">
+    {{>finder/filter}}
+    <div class='js-live-search-results-block'>
+      <div class="filtered-results">
+        <div aria-live='assertive' id='js-search-results-info'>
+          {{>finder/count}}
+        </div>
+        <div id='js-results'>
+          {{>finder/list}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
